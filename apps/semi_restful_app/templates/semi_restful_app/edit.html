@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <title>CreateNew</title>
+</head>
+<body>
+    <h1>Edit User {{user.id}}</h1>
+    <form action ='/users/{{user.id}}/update' method="POST">
+        {% csrf_token %}
+        <p>First Name: </p>
+        <input type="text" name="first_name" value={{user.first_name}}>
+        <p>Last Name:</p>
+        <input type="text" name="last_name" value={{user.last_name}}>
+        <p>Email:</p>
+        <input type="email" name="Email" value ={{user.Email}}>
+        <input type="submit" value="Update">
+    </form>
+    <a href="/users/{{user.id}}">Show</a>
+    |
+    <a href="/users">Go Back</a>
+    
+</body>

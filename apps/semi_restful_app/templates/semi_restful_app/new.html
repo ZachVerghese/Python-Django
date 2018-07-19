@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <title>CreateNew</title>
+</head>
+<body>
+    <h1>Add a new user</h1>
+    <form action ='/users/create' method="POST">
+        {% csrf_token %}
+        <p>First Name: </p>
+        <input type="text" name="first_name">
+        <p>Last Name:</p>
+        <input type="text" name="last_name">
+        <p>Email:</p>
+        <input type="email" name="Email">
+        <input type="submit" value="Create">
+    </form>
+    <a href="/users">Go Back</a>
+    
+</body>
+</html>
